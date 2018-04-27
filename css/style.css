@@ -120,6 +120,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -127,6 +139,7 @@ body {
     display: inline-block;
     border-radius: 50px;
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
@@ -139,6 +152,30 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.btn::after {
+    /*These rules must exist or the element will not appear*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+
+.btn:hover::after {
+    transform: scale(1.05);
+}
+
 .btn-white {
     background-color: white;
     color: #777;
@@ -146,4 +183,8 @@ body {
 
 .header-btn {
     margin-left: 201px;
+    /*  rule goes: animation duration timing-function delay */
+    animation: moveInBottom .5s ease-out .2s;
+    /* this property applies the initial animation style to the element before the animation occurs */
+    animation-fill-mode: backwards; 
 }
