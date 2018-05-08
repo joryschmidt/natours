@@ -40,11 +40,20 @@
     }
     
     &--white {
-        background-color: white;
+        background-color: $white;
         color: #777;
         
         &::after {
             background-color: $white;
+        }
+    }
+    
+    &--green {
+        background-color: $medium-green;
+        color: $white;
+        
+        &::after {
+            background-color: $medium-green;
         }
     }
 }
