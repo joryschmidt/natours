@@ -29,5 +29,10 @@
 
 .section-stories {
   padding: 15rem 0;
-  background-color: $light-grey-1;
+  position: relative;
+  
+  // had to use this for a second to see the live preview correctly in c9 ide for some reason
+  // :not(:first-child) {
+  //   position: absolute;
+  // }
 }
