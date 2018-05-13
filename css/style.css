@@ -451,6 +451,42 @@ body {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%) grayscale(30%); }
 
+.footer {
+  background-color: #333;
+  padding: 5rem 0;
+  font-size: 1.4rem; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__nav {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block;
+    width: auto; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+    transition: color .3s; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c57a; }
+  .footer__copyright {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    width: 75%;
+    float: right; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
