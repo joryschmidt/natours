@@ -6,6 +6,7 @@
   border-radius: $def-border-radius;
   box-shadow: 0 1.5rem 3rem rgba($black, 0.15);
   transition: all .3s;
+  backface-visibility: hidden;
   
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
