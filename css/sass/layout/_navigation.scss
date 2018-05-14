@@ -13,6 +13,7 @@
   }
   
   &__button {
+    text-align: center;
     background-color: $white;
     height: 7rem;
     width: 7rem;
@@ -82,5 +83,33 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+  
+  // Icon
+  &__icon {
+    
+    position: relative;
+    margin-top: 3.5rem;
+    
+    &, &::before, &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $dark-grey-3;
+      display: inline-block;
+    }
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    
+    &::before {
+      top: -.8rem;
+    }
+    
+    &::after {
+      top: .8rem;
+    }
   }
 }
