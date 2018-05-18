@@ -23,6 +23,7 @@
     right: 6rem;
     z-index: 7;
     box-shadow: 0 1rem 3rem rgba($black, .15);
+    cursor: pointer;
   }
   
   &__checkbox {
@@ -51,6 +52,7 @@
   
   &__item {
     margin: 1rem;
+    backface-visibility: hidden;
   }
   
   &__link {
@@ -85,6 +87,20 @@
     width: 100%;
   }
   
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+    
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+  
   // Icon
   &__icon {
     
@@ -96,6 +112,7 @@
       height: 2px;
       background-color: $dark-grey-3;
       display: inline-block;
+      transition: all 0.3s;
     }
     
     &::before, &::after {
@@ -110,6 +127,16 @@
     
     &::after {
       top: .8rem;
+    }
+  }
+  
+  &__button:hover &__icon {
+    &::before {
+      top: -1rem;
+    }
+    
+    &::after {
+      top: 1rem;
     }
   }
 }
