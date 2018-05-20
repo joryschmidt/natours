@@ -14,6 +14,11 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    
     
     &__logo-box {
       position: absolute;
@@ -34,6 +39,11 @@
     
     &__btn {
         margin-left: 20.1rem;
+        
+        @include respond(phone) {
+            margin-left: 7rem;
+        }
+        
         /*  rule goes: animation duration timing-function delay */
         animation: moveInBottom .5s ease-out .2s;
         /* this property applies the initial animation style to the element before the animation occurs */
@@ -49,6 +59,7 @@
     /* text indent offsets the largest letter spacing to center the text in the header text box */
     text-indent: 3.5rem;
     
+    
     /*This is a hack that prevents animation shaking*/
     /*backface-visibility: hidden;*/
     
@@ -57,6 +68,12 @@
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
+        
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+            text-indent: 1rem;
+        }
         
         animation-name: moveInLeft;
         animation-duration: 1s;
@@ -68,6 +85,11 @@
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.74rem;
+        
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            text-indent: 2rem;
+        }
         
         animation: moveInRight 1s ease-out;
     }

@@ -18,10 +18,6 @@ html {
     @include respond(tab-port) {
         font-size: 50%;
     }
-    
-    @include respond(phone) {
-        font-size: 32%;
-    }
 }
 
 body {
@@ -37,4 +33,8 @@ body {
     
     /* element only properties */
     padding: 3rem;
+    
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }

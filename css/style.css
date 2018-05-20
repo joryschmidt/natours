@@ -26,9 +26,6 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 32%; } }
 
 body {
   /* inherited properties */
@@ -40,6 +37,9 @@ body {
   box-sizing: border-box;
   /* element only properties */
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -79,6 +79,12 @@ body {
   color: transparent;
   transition: all 1.5s;
   letter-spacing: 2px; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.8rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.1rem; } }
   .heading-secondary:hover {
     transform: scale(1.01) translateY(-0.2rem);
     text-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.15);
@@ -575,8 +581,14 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 2rem; } }
   .row::after {
     content: "";
     display: table;
@@ -586,6 +598,13 @@ body {
     padding: 0.5rem; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 4rem; }
+      @media (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0; } }
+    @media (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 100% !important;
+        margin-bottom: 2rem; } }
   .row .col-1-of-2 {
     width: calc(1 * ((100% - (2 - 1) * 4rem)/2) + (1 - 1) * 4rem); }
   .row .col-1-of-3 {
@@ -607,6 +626,10 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -624,6 +647,9 @@ body {
     animation: moveInBottom .5s ease-out .2s;
     /* this property applies the initial animation style to the element before the animation occurs */
     animation-fill-mode: backwards; }
+    @media (max-width: 37.5em) {
+      .header__btn {
+        margin-left: 7rem; } }
 
 .heading-primary {
   color: #fff;
@@ -641,12 +667,21 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+        text-indent: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem;
+        text-indent: 2rem; } }
 
 .navigation__background {
   height: 6rem;
