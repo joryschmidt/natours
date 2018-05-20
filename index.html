@@ -23,11 +23,11 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Your Benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Popular Tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Book Now</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#section-features" class="navigation__link">Your Benefits</a></li>
+                    <li class="navigation__item"><a href="#section-tours" class="navigation__link">Popular Tours</a></li>
+                    <li class="navigation__item"><a href="#section-stories" class="navigation__link">Stories</a></li>
+                    <li class="navigation__item"><a href="#section-booking" class="navigation__link">Book Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,7 +48,7 @@
         </header>
         
         <main>
-            <section class="section-about">
+            <section class="section-about" id="section-about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
                 </div>
@@ -80,7 +80,7 @@
                 </div>
             </section>
             
-            <section class="section-features">
+            <section class="section-features" id="section-features">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -223,7 +223,7 @@
                 </div>
             </section>
             
-            <section class="section-stories">
+            <section class="section-stories" id="section-stories">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4" />
@@ -279,7 +279,7 @@
                 </div>
             </section>
             
-            <section class="section-booking">
+            <section class="section-booking" id="section-booking">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -407,7 +407,18 @@
                 <div class='col-1-of-4'>column 1 of 4</div>
                 <div class='col-3-of-4'>column 3 of 4</div>
             </div>
-        </section>
-        -->
+        </section>-->
+        
+        <!-- just add some quick jquery to make the menu work as expected -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>        
+          <script type="text/javascript">
+              $('.navigation__item').click(function() {
+                  $('.navigation__button').click();
+                  window.location.replace(this.childNodes[0].href);
+              });
+          </script>
     </body>
 </html>

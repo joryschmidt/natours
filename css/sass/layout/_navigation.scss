@@ -10,6 +10,12 @@
     z-index: 5;
     transition: transform 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     
+    @include respond(tab-port) {
+      height: 4rem;
+      width: 4rem;
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
   
   &__button {
@@ -24,6 +30,13 @@
     z-index: 7;
     box-shadow: 0 1rem 3rem rgba($black, .15);
     cursor: pointer;
+    
+    @include respond(tab-port) {
+      height: 5.5rem;
+      width: 5.5rem;
+      top: 2rem;
+      right: 2rem;
+    }
   }
   
   &__checkbox {
@@ -107,8 +120,17 @@
     position: relative;
     margin-top: 3.5rem;
     
+    @include respond(tab-port) {
+      margin-top: 2.75rem;
+    }
+    
     &, &::before, &::after {
       width: 3rem;
+      
+      @include respond(tab-port) {
+        width: 2.5rem;
+      }
+      
       height: 2px;
       background-color: $dark-grey-3;
       display: inline-block;
