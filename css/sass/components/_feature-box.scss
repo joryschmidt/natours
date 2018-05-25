@@ -8,6 +8,8 @@
   transition: all .3s;
   backface-visibility: hidden;
   
+  
+  
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 0 2rem 4rem rgba($black, 0.4);
@@ -20,6 +22,10 @@
     background-image: linear-gradient(to right, $light-green, $dark-green);
     -webkit-background-clip: text;
     color: transparent;
+    
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
   
   &__text {
