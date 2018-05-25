@@ -3,6 +3,10 @@
   padding: 5rem 0;
   font-size: 1.4rem;
   
+  @include respond(tab-port) {
+    padding: 8rem 0; 
+  }
+  
   &__logo-box {
     text-align: center;
   }
@@ -16,6 +20,11 @@
     border-top: 1px solid $light-grey-2;
     padding-top: 2rem;
     display: inline-block;
+    
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
   
   &__list {
@@ -40,6 +49,10 @@
       padding: 0 5px;
       margin: 0;
       transition: color .3s;
+      
+      @include respond(tab-port) {
+        padding: 0 3px;
+      }
     }
     
     &:hover, &:active {
@@ -52,5 +65,11 @@
     padding-top: 2rem;
     width: 75%;
     float: right;
+    
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
   }
 }

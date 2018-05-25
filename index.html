@@ -219,7 +219,7 @@
                 </div>
                 
                 <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn btn--green">Discover all tours</a>
+                    <a href="#section-tours" class="btn btn--green">Discover all tours</a>
                 </div>
             </section>
             
@@ -415,9 +415,9 @@
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>        
           <script type="text/javascript">
-              $('.navigation__item').click(function() {
+              $('.navigation__link').click(function() {
                   $('.navigation__button').click();
-                  window.location.replace(this.childNodes[0].href);
+                  window.location.replace(this.href);
               });
           </script>
     </body>
