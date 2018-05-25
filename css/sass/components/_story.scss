@@ -9,12 +9,32 @@
   font-size: $def-font-size;
   transform: skewX(-12deg);
   
+  @include respond(tab-port) {
+    width: 100%;
+    transform: skewX(-7deg);
+    line-height: 1.6;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+  
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+  
   &__shape {
     width: 15rem;
     height: 15rem;
     float: left;
     position: relative;
     transform: translateX(-3rem) skewX(12deg);
+    
+    @include respond(tab-port) {
+      transform: translateX(-3rem) skewX(7deg);
+    }
+  
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
     
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
@@ -31,6 +51,14 @@
   
   &__text {
     transform: skewX(12deg);
+    
+    @include respond(tab-port) {
+      transform: skewX(7deg);
+    }
+  
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   
   &__caption {
