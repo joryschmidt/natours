@@ -144,4 +144,61 @@
     font-weight: 300;
     margin-bottom: 6rem;
   }
+  
+  
+  
+  
+  
+  
+  
+  @include respond(tab-port) {
+ 
+    position: relative;
+    height: auto;
+    border-radius: $def-border-radius;
+    background-color: $white;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+    
+    &__side {
+      height: auto;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: none;
+        
+      &--back {
+        transform: rotate(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        border-bottom-left-radius: $def-border-radius;
+        border-bottom-right-radius: $def-border-radius;
+      }
+    }
+    
+    &:hover &__side--front {
+      transform: none;
+    }
+    
+    &__details {
+      padding: 1rem;
+    }
+    
+    // back styling
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+    
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+    
+    &__price-value {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
 }
