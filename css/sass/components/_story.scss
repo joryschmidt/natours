@@ -73,6 +73,7 @@
     text-align: center;
     transition: all .5s;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   
   &:hover &__caption {

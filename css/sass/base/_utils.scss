@@ -18,4 +18,10 @@
 }
 
 .u-margin-top-big      { margin-top: 8rem; }
-.u-margin-top-huge     { margin-top: 12rem; }
+.u-margin-top-huge { 
+  margin-top: 12rem; 
+  
+  @include respond(phone) {
+    margin-top: 6rem;
+  }
+}
