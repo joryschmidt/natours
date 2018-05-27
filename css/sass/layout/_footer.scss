@@ -30,6 +30,7 @@
     @include respond(tab-port) {
       width: 100%;
       text-align: center;
+      margin: 0;
     }
   }
   
@@ -77,6 +78,7 @@
       width: 100%;
       text-align: center;
       float: none;
+      margin: 0;
     }
   }
 }
