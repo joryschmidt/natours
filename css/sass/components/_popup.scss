@@ -33,6 +33,12 @@
       display: inline-block;
       transition: all .2s;
       line-height: 1;
+      
+      @include respond(tab-port) {
+        color: $black;
+        top: 1rem;
+        right: 1.5rem;
+      }
     }
     
     &:hover {
@@ -95,7 +101,7 @@
       width: 60%;
       
       .heading-secondary {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         letter-spacing: 1px;
         margin: 0;
       }
