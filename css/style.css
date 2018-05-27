@@ -109,6 +109,9 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .u-margin-bottom-small {
+      margin-bottom: 1rem; } }
 
 .u-margin-bottom-med {
   margin-bottom: 4rem; }
@@ -545,7 +548,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-image: linear-gradient(to right, #000 0%, #000 33.33333%, #fff 33.33333%);
     width: 70%;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
     border-radius: 3px;
@@ -555,7 +558,8 @@ body {
     transition: all .3s; }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    background-color: #000; }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
@@ -566,10 +570,55 @@ body {
     width: 100%; }
   .popup__text {
     font-size: 1.4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 2px solid #eee; }
+  @media (max-width: 75em) {
+    .popup__left {
+      width: 40%; }
+    .popup__right {
+      width: 60%; }
+      .popup__right .heading-secondary {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin: 0; }
+      .popup__right .heading-tertiary {
+        font-size: 1.4rem; }
+      .popup__right .btn {
+        font-size: 1.4rem; }
+    .popup__text {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      column-count: 1; } }
+  @media (max-width: 56.25em) {
+    .popup__content {
+      background-image: none;
+      background-color: #fff;
+      display: block; }
+    .popup__left {
+      display: flex;
+      background-color: #fff;
+      width: 100%; }
+    .popup__img {
+      display: inline-block; }
+      .popup__img__container {
+        width: 50%; }
+        .popup__img__container--1 {
+          flex: 1.5005; }
+        .popup__img__container--2 {
+          flex: 1.4535; }
+    .popup__right {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%; } }
+  @media (max-width: 37.5em) {
+    .popup__right {
+      padding: 2rem 3rem; }
+      .popup__right .heading-secondary {
+        font-size: 1.7rem; }
+      .popup__right .heading-tertiary {
+        font-size: 1.2rem; } }
 
 .story {
   width: 75%;
