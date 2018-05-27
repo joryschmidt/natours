@@ -704,7 +704,11 @@ body {
     text-align: center; }
   .footer__logo {
     width: 15rem;
-    height: auto; }
+    height: auto;
+    margin-bottom: 3rem; }
+    @media (max-width: 37.5em) {
+      .footer__logo {
+        width: 20rem; } }
   .footer__nav {
     border-top: 1px solid #eee;
     padding-top: 2rem;
