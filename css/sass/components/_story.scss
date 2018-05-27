@@ -27,6 +27,7 @@
     float: left;
     position: relative;
     transform: translateX(-3rem) skewX(12deg);
+    overflow: hidden;
     
     @include respond(tab-port) {
       transform: translateX(-3rem) skewX(7deg);
@@ -36,11 +37,12 @@
       transform: translateX(-3rem) skewX(0);
     }
     
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    @supports (clip-path: circle(50% at 50% 50%)) or (-webkit-clip-path: circle(50% at 50% 50%)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
   }
   
   &__img {
