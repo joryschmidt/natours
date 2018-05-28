@@ -434,14 +434,25 @@
         
         <!-- just add some quick jquery to make the menu work as expected -->
         <script
-          src="https://code.jquery.com/jquery-3.3.1.min.js"
-          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-          crossorigin="anonymous"></script>        
-          <script type="text/javascript">
-              $('.navigation__link').click(function() {
-                  $('.navigation__button').click();
-                  window.location.replace(this.href);
-              });
-          </script>
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>        
+        
+        <!-- makes the menu work -->
+        <script type="text/javascript">
+            $('.navigation__link').click(function() {
+                $('.navigation__button').click();
+                window.location.replace(this.href);
+            });
+        </script>
+        
+        <!-- this script makes the popup go away if clicked outside the content -->
+        <script type="text/javascript">
+            $('#popup').click(function(event) {
+                var target = $(event.target);
+                if (target.is('#popup')) window.location.replace('/#section-tours');
+            });
+        </script>
     </body>
 </html>
